@@ -1073,14 +1073,15 @@ GuiBuilder - To create GUI wrapper for any script...
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 
 =head1 SYNOPSIS
+
   use strict;
   
   use Tk;
@@ -1097,21 +1098,26 @@ our $VERSION = '0.02';
 
 =head1 DESCRIPTION
 
-GuiBuilder  generates the PERL GUI wrapper (as per options selected by user) compatible to Tk for any script/utility. Invoking generate_gui method opens one GUI window where user need to select/specify options needed to create GUI wrapper for any script/utility. It provides most commonly used GUI fields like Checkbutton, Button, Text Field, Label, Radiobutton, Listbox, etc. GUI invoked using generate_gui method call is self explanatory. However, some useful information is provided below to understand it better.
+GuiBuilder generates the PERL GUI wrapper (as per options selected by user) compatible to Tk for any script/utility. 
 
-#----------------------- Example Description Starts----------------------------
+Invoking generate_gui method opens one GUI window where user need to select/specify options needed to create GUI wrapper for any script/utility. 
 
-For example, if user need to create GUI as depicted below within dotted box, then he need to select/specify following in GUI windows invoked by generate_gui method.
+It provides most commonly used GUI fields like Checkbutton, Button, Text Field, Label, Radiobutton, Listbox, etc. 
 
-  => 3 Radio Button named Radio_Button_1, Radio_Button_2 and Radio_Button_3 at Frame/Row/Column = 1/1/1, 1/1/2 and 1/1/3 respectively.
+GUI invoked using generate_gui method call is self explanatory. However, some useful information is provided below to understand it better.
 
-  => 2 Check Boxes named Check_Box_1 and Check_Box_2 at Frame/Row/Column = 1/2/1 and 1/2/2 respectively.
 
-  => 1 Label named 'Label Enter Text Here:' at Frame/Row/Column = 1/3/1
+  For example, if user need to create GUI as depicted below within dotted box, then he need to select/specify following in GUI windows invoked by generate_gui method.
 
-  => 1 Text Field (with any name) at Frame/Row/Column = 1/3/2
+    => 3 Radio Button named Radio_Button_1, Radio_Button_2 and Radio_Button_3 at Frame/Row/Column = 1/1/1, 1/1/2 and 1/1/3 respectively.
 
-  => 2 Buttons named Button_OK and Button_Cancel at Frame/Row/Column 2/1/1 and 2/1/2 respectively.
+    => 2 Check Boxes named Check_Box_1 and Check_Box_2 at Frame/Row/Column = 1/2/1 and 1/2/2 respectively.
+
+    => 1 Label named 'Label Enter Text Here:' at Frame/Row/Column = 1/3/1
+
+    => 1 Text Field (with any name) at Frame/Row/Column = 1/3/2
+
+    => 2 Buttons named Button_OK and Button_Cancel at Frame/Row/Column 2/1/1 and 2/1/2 respectively.
 
                      |<------ Column 1 ------->|<---Column 2-------->|<-----Column 3----------->|
                      |--------------------------------------------------------------------------|
@@ -1136,15 +1142,13 @@ For example, if user need to create GUI as depicted below within dotted box, the
       => It is having one subroutine named 'get_gui_options' which returns values of all the Options selcted by user in the form of list. 
          Using values provided by this subroutine user can invoke its command line version of the script/utility.
 
-#----------------------- Example Description Ends -----------------------------
+GuiBuilder also provides options for loading, saving and deleting of the options entered through GUI window. These options are useful 
 
-GuiBuilder also provides options for loading, saving and deleting of the options entered through GUI window. This options are useful 
+=> To enter GUI configuration details in the form of text file instead of entering each details in GUI window (loading feature)
 
-  => To enter GUI configuration details in the form of text file instead of entering each details in GUI window (loading feature)
+=> To delete wrong entries entered by mistake (deleting feature)
 
-  => To delete wrong entries entered by mistake (deleting feature)
-
-  => Saving entries which can be restored later (saving feature)
+=> Saving entries which can be restored later (saving feature)
 
 GuiBuilder will invoke GUI Error prompts on illegal/invalid user options.
 
