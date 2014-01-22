@@ -13,6 +13,9 @@ WriteMakefile(
     MIN_PERL_VERSION => 5.006,
     CONFIGURE_REQUIRES => {
         'ExtUtils::MakeMaker' => 0,
+        'Tk'              => 804.030,
+        'Tk::MsgBox'      => 4.002,
+        'Tk::Pane'        => 4.007,
     },
     BUILD_REQUIRES => {
         'Test::More' => 0,
